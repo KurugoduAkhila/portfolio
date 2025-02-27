@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaLinkedinIn, FaBehance } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 
 const Footer = () => {
@@ -9,17 +9,17 @@ const Footer = () => {
     {
       name: 'LinkedIn',
       icon: FaLinkedinIn,
-      url: 'https://www.linkedin.com/in/shweta-jalalapure',
+      url: 'https://linkedin.com/in/kurugodu-akhila-7444bb259',
     },
     {
-      name: 'Behance',
-      icon: FaBehance,
-      url: 'https://www.behance.net/shwetajalalapure',
+      name: 'GitHub',
+      icon: FaGithub,
+      url: 'https://github.com/KurugoduAkhila',
     },
     {
       name: 'Email',
       icon: HiMail,
-      url: 'mailto:shwetajalalapure@gmail.com',
+      url: 'mailto:kurugoduakhila02@gmail.com',
     },
   ];
 
@@ -28,7 +28,6 @@ const Footer = () => {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -44,15 +43,15 @@ const Footer = () => {
               className="space-y-4"
             >
               <h3 className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                Shweta Jalalapure
+                Kurugodu Akhila
               </h3>
               <p className="text-gray-400 leading-relaxed">
-                A passionate UI/UX designer focused on creating intuitive and engaging user experiences
-                through thoughtful design and creative solutions.
+                A passionate Computer Science Engineering student focused on developing intuitive applications
+                through programming and problem-solving skills.
               </p>
               <div className="text-gray-400">
                 <p className="font-semibold text-gray-300">Location:</p>
-                <p>Bangalore, India</p>
+                <p>Rayadurg, Andhra Pradesh</p>
               </div>
             </motion.div>
 
@@ -113,7 +112,7 @@ const Footer = () => {
           className="border-t border-gray-800 py-8"
         >
           <p className="text-center text-gray-400 text-sm">
-            © {currentYear} Shweta Jalalapure. All rights reserved.
+            © {currentYear} Kurugodu Akhila. All rights reserved.
           </p>
         </motion.div>
       </div>

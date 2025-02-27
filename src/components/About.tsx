@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { HiOutlineLocationMarker, HiOutlineCode, HiOutlineClock, HiOutlineBriefcase } from 'react-icons/hi';
-import meImage from '../assets/me1.jpeg';
+import { HiOutlineLocationMarker, HiOutlineCode, HiOutlineAcademicCap, HiOutlineBriefcase } from 'react-icons/hi';
 import { useEffect, useState } from 'react';
 
 const About = () => {
@@ -36,23 +35,22 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <div className="w-24 h-1.5 bg-indigo-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Creative and detail-oriented UX/UI Designer
+            Computer Science Engineering Student
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-gray-600 leading-relaxed">
-                A creative and detail-oriented UX/UI Designer with expertise in user-centered design, wireframing, prototyping, 
-                and research. Passionate about crafting intuitive, visually appealing experiences, collaborating with teams, and 
-                leveraging design tools to enhance usability, engagement, and innovation in digital products.
+                A dedicated Computer Science Engineering student with a strong foundation in programming, data structures, and database management. 
+                Passionate about developing user-friendly applications and solving complex problems through innovative solutions.
               </p>
               <div className="mt-8 p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl shadow-sm">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Core Skills & Expertise</h3>
@@ -64,7 +62,7 @@ const About = () => {
                       </svg>
                     </div>
                     <p className="text-gray-600">
-                      <span className="font-semibold">User Experience Design:</span> Creating intuitive and engaging user experiences through thoughtful design.
+                      <span className="font-semibold">Programming:</span> Proficient in C, Java, Python, and HTML for developing various applications.
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -74,7 +72,7 @@ const About = () => {
                       </svg>
                     </div>
                     <p className="text-gray-600">
-                      <span className="font-semibold">Prototyping & Wireframing:</span> Developing detailed wireframes and interactive prototypes to visualize design concepts.
+                      <span className="font-semibold">Database Management:</span> Experience with SQL and DBMS for efficient data handling and management.
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -84,112 +82,36 @@ const About = () => {
                       </svg>
                     </div>
                     <p className="text-gray-600">
-                      <span className="font-semibold">Visual Design:</span> Creating aesthetically pleasing interfaces with attention to color theory and iconography.
+                      <span className="font-semibold">Problem Solving:</span> Strong analytical skills with expertise in data structures and algorithms.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <HiOutlineLocationMarker className="w-6 h-6 text-indigo-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Location</h4>
-                  <p className="text-gray-600">Bangalore, India</p>
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 bg-indigo-50/50 p-6 rounded-xl">
+              <div className="flex flex-col items-center text-center">
+                <HiOutlineLocationMarker className="w-6 h-6 text-indigo-600 mb-2" />
+                <h4 className="font-semibold text-gray-900">Location</h4>
+                <p className="text-gray-600">Rayadurg, Andhra Pradesh</p>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <HiOutlineCode className="w-6 h-6 text-indigo-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Specialization</h4>
-                  <p className="text-gray-600">UI/UX Designer</p>
-                </div>
+              <div className="flex flex-col items-center text-center">
+                <HiOutlineCode className="w-6 h-6 text-indigo-600 mb-2" />
+                <h4 className="font-semibold text-gray-900">Specialization</h4>
+                <p className="text-gray-600">Computer Science</p>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <HiOutlineClock className="w-6 h-6 text-indigo-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Experience</h4>
-                  <p className="text-gray-600">1 Year Experience</p>
-                </div>
+              <div className="flex flex-col items-center text-center">
+                <HiOutlineAcademicCap className="w-6 h-6 text-indigo-600 mb-2" />
+                <h4 className="font-semibold text-gray-900">Education</h4>
+                <p className="text-gray-600">B.E in CSE (CGPA: 8.6/10)</p>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <HiOutlineBriefcase className="w-6 h-6 text-indigo-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900">Availability</h4>
-                  <p className="text-gray-600">Full Time</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="relative w-full max-w-md mx-auto"
-          >
-            <div className="relative">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="relative z-20"
-              >
-                <div className="rounded-2xl overflow-hidden shadow-2xl bg-white p-3">
-                  <div className="aspect-[4/5] relative rounded-xl overflow-hidden">
-                    <img
-                      src={meImage}
-                      alt="Professional headshot of Shweta Jalalapure, UI/UX Designer"
-                      className="absolute inset-0 w-full h-full object-cover object-top hover:scale-105 transition-all duration-500 select-none pointer-events-none"
-                      onContextMenu={(e) => e.preventDefault()}
-                      draggable="false"
-                      style={{ WebkitUserSelect: 'none', userSelect: 'none' }}
-                    />
-                    <div 
-                      className="absolute inset-0 pointer-events-none select-none" 
-                      onContextMenu={(e) => e.preventDefault()}
-                    ></div>
-                  </div>
-                </div>
-                <motion.div
-                  className="absolute -inset-1 -z-10 rounded-2xl bg-gradient-to-br from-green-200/50 to-green-300/50 blur-sm opacity-75"
-                  animate={{
-                    scale: [1, 1.02, 1],
-                    opacity: [0.5, 0.6, 0.5],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                ></motion.div>
-              </motion.div>
-
-              {/* Decorative Elements */}
-              <div className="absolute -bottom-1 -right-1 w-64 h-64 rounded-full blur-sm -z-10 bg-gradient-to-br from-green-200/40 to-green-300/40 opacity-60"></div>
-              <div className="absolute -top-1 -left-1 w-64 h-64 rounded-full blur-sm -z-10 bg-gradient-to-br from-green-200/40 to-green-300/40 opacity-60"></div>
-              
-              {/* Additional decorative dots */}
-              <div className="absolute top-0 right-0 w-20 h-20">
-                <div className="grid grid-cols-3 gap-2">
-                  {[...Array(9)].map((_, i) => (
-                    <div key={i} className="w-1.5 h-1.5 rounded-full bg-indigo-600/20"></div>
-                  ))}
-                </div>
+              <div className="flex flex-col items-center text-center">
+                <HiOutlineBriefcase className="w-6 h-6 text-indigo-600 mb-2" />
+                <h4 className="font-semibold text-gray-900">Availability</h4>
+                <p className="text-gray-600">Open to Opportunities</p>
               </div>
             </div>
           </motion.div>

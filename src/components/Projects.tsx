@@ -2,24 +2,31 @@ import { motion } from 'framer-motion';
 
 const projectsData = [
   {
-    title: 'Workspace Website',
-    description: 'Designed a seamless, productivity-focused workspace platform with an intuitive UI. Enhanced user experience with modern layouts, interactive dashboards, and responsive design.',
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1170&auto=format&fit=crop',
-    tags: ['User Experience Design', 'User Interface Design', 'Wireframing', 'Figma', 'Wix Studio'],
+    title: 'E-Appointment Application',
+    description: 'Developed an Android-based appointment booking app with user authentication, scheduling, and real-time notifications using Java/Kotlin and Firebase. Implemented secure user profiles and appointment management.',
+    image: 'https://img.freepik.com/free-photo/programming-background-with-person-working-with-codes-computer_23-2150010125.jpg',
+    tags: ['Android', 'Java', 'Kotlin', 'Firebase', 'Real-time Database', 'Authentication'],
     liveUrl: '#'
   },
   {
-    title: 'Astrology Website',
-    description: 'Created an engaging astrology platform with immersive visuals and interactive elements. Optimized user flow for personalized horoscope readings and seamless navigation.',
-    image: 'https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1170&auto=format&fit=crop',
-    tags: ['Visual Design', 'Interactive Design', 'User Flow', 'Canva', 'Wix Editor'],
+    title: 'Online Voting System',
+    description: 'Developed a user-friendly interactive voting system ensuring data integrity and confidentiality. Implemented secure authentication and vote counting mechanisms.',
+    image: 'https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=1170&auto=format&fit=crop',
+    tags: ['C', 'Data Structures', 'User Authentication', 'Security'],
     liveUrl: '#'
   },
   {
-    title: 'Crane Industries Website',
-    description: 'Developed an industrial-grade website with a robust, scalable design. Focused on accessibility, structured information, and high-performance web architecture.',
-    image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1170&auto=format&fit=crop',
-    tags: ['Information Architecture', 'UI Design', 'Adobe Illustrator', 'Responsive Design', 'Figma'],
+    title: 'Loan Prediction using Machine Learning',
+    description: 'Built a machine learning model predicting loan eligibility using pandas and scikit-learn, achieving high accuracy. Implemented data preprocessing, feature engineering, and model evaluation.',
+    image: 'https://images.unsplash.com/photo-1589758438368-0ad531db3366?q=80&w=1170&auto=format&fit=crop',
+    tags: ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn', 'Data Analysis'],
+    liveUrl: '#'
+  },
+  {
+    title: 'Hotel Management System',
+    description: 'Developed a system to manage reservations, customer data, and billing using SQL and CRUD operations. Implemented database design with proper relationships and constraints.',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1170&auto=format&fit=crop',
+    tags: ['DBMS', 'SQL', 'Database Design', 'CRUD Operations'],
     liveUrl: '#'
   },
 ];
@@ -38,12 +45,53 @@ const Projects = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
           <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of my key design projects, showcasing my skills in UI/UX design and web development
+            Here are some of my key projects, showcasing my skills in mobile development, programming, and database management
           </p>
         </motion.div>
 
+        {/* Featured Project */}
+        <div className="mb-16">
+          <motion.div
+            key="featured-project"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="relative overflow-hidden group h-64 md:h-auto">
+                <img
+                  src={projectsData[0].image}
+                  alt={projectsData[0].title}
+                  className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div className="p-8 flex flex-col justify-center">
+                <div className="mb-2">
+                  <span className="px-3 py-1 bg-indigo-600 text-white rounded-full text-sm inline-block mb-3">Featured Project</span>
+                </div>
+                <h3 className="text-3xl font-semibold text-gray-900 mb-4">{projectsData[0].title}</h3>
+                <p className="text-gray-600 mb-6">{projectsData[0].description}</p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {projectsData[0].tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm text-center"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Other Projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projectsData.map((project, index) => (
+          {projectsData.slice(1).map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaLinkedinIn, FaBehance } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { HiMail } from 'react-icons/hi';
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-7xl font-bold text-gray-900 mb-3">
-              Hi, I'm <span className="text-indigo-600">Shweta Jalalapure</span>
+              Hi, I'm <span className="text-indigo-600">Kurugodu Akhila</span>
             </h1>
           </motion.div>
           
@@ -23,7 +23,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className="text-lg md:text-3xl text-gray-600 mb-6">
-              UI/UX Designer
+              Computer Science Engineer
             </h2>
           </motion.div>
           
@@ -31,31 +31,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-3 justify-center px-4 sm:px-0"
-          >
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300 shadow-sm"
-            >
-              Get in Touch
-            </a>
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-md text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition-colors duration-300 shadow-sm"
-            >
-              View Projects
-            </a>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
             className="mt-8"
           >
             <div className="flex justify-center space-x-6">
               <a
-                href="https://www.linkedin.com/in/shweta-v-j/"
+                href="https://linkedin.com/in/kurugodu-akhila-7444bb259"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
@@ -64,20 +44,20 @@ const Hero = () => {
                 <FaLinkedinIn className="h-6 w-6" />
               </a>
               <a
-                href="mailto:shwetajalalapure@gmail.com"
+                href="mailto:kurugoduakhila02@gmail.com"
                 className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
               >
                 <span className="sr-only">Email</span>
                 <HiMail className="h-6 w-6" />
               </a>
               <a
-                href="https://www.behance.net/shwetajalalapure"
+                href="https://github.com/KurugoduAkhila"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
               >
-                <span className="sr-only">Behance</span>
-                <FaBehance className="h-6 w-6" />
+                <span className="sr-only">GitHub</span>
+                <FaGithub className="h-6 w-6" />
               </a>
             </div>
           </motion.div>
