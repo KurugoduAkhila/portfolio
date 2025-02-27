@@ -59,6 +59,7 @@ A modern portfolio website for Computer Science Engineer Kurugodu Akhila.
 - Modern UI with animations
 - Showcase of projects and skills
 - Clean, minimalist design
+- Updated and maintained by Kurugodu Akhila
 
 ## Live Demo
 
